@@ -1,0 +1,17 @@
+ // ... your existing app.js setup ...
+
+ // Serve Extension ZIP
+ app.get('/download-extension', /* ... */);
+
++// Serve favicon without 404
++app.get('/favicon.ico', (req, res) => {
++  res.sendFile(path.join(__dirname, '../public/favicon.ico'));
++});
+
+ // Root Route
+ app.get('/', (req, res) => { /* ... */ });
+
+ // 404 Handler
+ app.use((req, res) => {
+   res.status(404).json({ error: 'Endpoint not found' });
+ });
