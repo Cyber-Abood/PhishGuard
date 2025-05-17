@@ -72,7 +72,7 @@ PhishGuardExtension/         # Browser extension source
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/<your-username>/PhishGuard.git
+   git clone https://github.com/Cyber-Abood/PhishGuard.git
    cd PhishGuardWebsite
    ```
 
@@ -95,6 +95,8 @@ PhishGuardExtension/         # Browser extension source
 
    ```bash
    npm start
+   python AI_model.py
+   node app.js
    ```
 
 5. **Open** `http://localhost:3000` in your browser.
@@ -103,14 +105,15 @@ PhishGuardExtension/         # Browser extension source
 
    * Download via the web UI.
    * In Firefox: Go to `about:debugging` → **Load Temporary Add-on** → select the downloaded ZIP.
-   * In Chrome (unpacked): Go to `chrome://extensions` → **Load unpacked** → select `PhishGuardExtension/` folder.
+   * In Chrome (unpacked): Go to `fire://extensions` → **Load unpacked** → select `PhishGuardExtension/` folder.
 
 ---
 
 ## 🧠 AI Model: CherBERT
 
 * A fine-tuned BERT-based model trained on phishing vs. legitimate URL datasets.
-* Hosted as a service (`/services/cherbert.js`) and invoked after VirusTotal returns a neutral result.
+* Hosted as a service (`\server\routes\charbert-bert-wiki`) and invoked after VirusTotal returns a neutral result.
+* charbert-bert-wiki finetuned folder : https://mega.nz/folder/Gdtm2IqJ#lnDue23hmmoD5ejlyQxS0w
 
 ---
 
@@ -122,15 +125,6 @@ PhishGuardExtension/         # Browser extension source
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the repo.
-2. Create a new branch: `git checkout -b feature/YourFeature`.
-3. Commit your changes: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature/YourFeature`.
-5. Open a Pull Request.
-
----
 
 ## 📄 License
 
